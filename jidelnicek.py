@@ -27,7 +27,7 @@ Migrate(app,db)
 ### MODELS ###
 
 #creating model (=table)
-class jidelnicek(db.Model):
+class Jidelnicek(db.Model):
 			#overriding the default set up of database name
 			__tablename__ = "jidelnicek"
 			id = db.Column(db.Integer,primary_key=True)
@@ -37,7 +37,10 @@ class jidelnicek(db.Model):
 			ingredience = db.Column(db.Text)
 			nazev_ingredience = db.Column(db.Text)
 
-			def _init_(self,URL,title,foto,ingredience,nazev_ingredience)
+##Neni nutne mit napsane
+			def _init_(self,URL,title,foto,ingredience,nazev_ingredience):
+					super.__init__(self)
+
 					self.name = name
 					self.URL = url
 					self.title = title
@@ -47,4 +50,6 @@ class jidelnicek(db.Model):
 
 			def __repr__(self):
 				#	return ??
+
+jidelnicek = Jidelnicek("...")
 
