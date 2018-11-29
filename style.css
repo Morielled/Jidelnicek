@@ -1,0 +1,24 @@
+h1.nadpis{
+	 color: green;
+	 font-family: 'Mali', cursive;
+	}
+/*nadpis jidelnicek*/
+.zarovnani{
+		text-align: center;
+}
+/*zarovnani cele sekce v jumbotronu na stred*/
+.pozadi{
+	background-image: url("cooking.jpg");
+	width: 1278px;
+	height: 605px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.jumbotron{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: center;
+}
+
+/*obrazek budu davat pres css kdyz ho chci prepsat v bootstrapu*/
