@@ -39,8 +39,8 @@ def jidelnicek():
 @app.route('/jidelnicek2')
 def jidel_planovac():
 
-		recept = Jidelnicek.query.limit(5).all()
-		return render_template('jidelnicek2.html', recept=recept)
+		#recept = Jidelnicek.query.limit(5).all()
+		return render_template('jidelnicek2.html') # recept=recept)
 
 @app.errorhandler(404)
 def error_404(error):
