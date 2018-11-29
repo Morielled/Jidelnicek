@@ -8,7 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" href="static/style.css" />
+		<link rel="stylesheet" href="/static/style.css" />
 
 		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
 
@@ -24,7 +24,7 @@
 					<hr class="my-4">
 					<p class="paragraf1a2">Pojďte si s námi vytvořit jídelníček a nákupní seznam na příští týden a máte o starost méně!</p>
 					<br>
-					<a class="btn btn-success generuj" href="#" role="button">Generuj recepty!</a>
+					<a class="btn btn-success generuj" href="{{ url_for('jidelnicek')}}" role="button">Generuj recepty!</a>
 				</div>
 
 				<!-- <a href="index.html"><img src="cooking.jpg" alt="" class="pozadi">></a>//-->
