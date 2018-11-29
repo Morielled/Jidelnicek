@@ -2,22 +2,57 @@
 <html>
 <head>
 		<meta charset="utf-8">
-		<title>JÍDELNÍČEK</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" href="/static/style.css" />
+	<title>JÍDELNÍČEK</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
 
-		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
+	<link rel="stylesheet" href="/static/style.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
+
 </head>
 <body>
-	<h1> Base file, tj. stejny template pro vice stranek</h1>
+	<!-- <h1> Base file, tj. stejny template pro vice stranek</h1>//-->
+	
+	<div class="Album">
+			<div class="jumbotron zarovnani pozadi">
+					
+					<h1 class="display-4 nadpis">Vygenerujte si recepty dle Vašeho přání!</h1>
+					<p class="lead paragraf1a2">Vyfiltrujte si kategorii receptů, ze kterých chcete mít sestavený jídelníček.</p>
+					<hr class="my-4">
+					<p class="paragraf1a2">Až si vyberete, zda byste rádi recepty na hlavní jídlo, nebo raději dezerty, stiskněte Generuj recepty - a pak už jen stačí uvařit a nechat si chutnat!</p>
+					
+					<div class="input-group">
+							<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with b	<option selected>Choose...</option>
+							utton addon">
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+							<div class="input-group-append">
+								<button class="btn btn-outline-secondary" type="button">Button</button>
+							</div>
+					</div>
+				<br>
+				<a class="btn btn-success generuj" href="#" role="button">Generuj recepty!</a>
+				</div>
+	
+	</div>
+
+</body>
+</html>
 
 	{% block content %}
 
 	{% endblock %}
 
-</body>
-</html>
+
+
+	<!-- v base.html pises NAD {% block content %} - tzn. ze nastavis jeden template pro vsechny stranky......v jidelnicek a jidelnicek2 budes psat MEZI {% block content %} a {% endblock %} tim mu reknes, jidelnicek.html vezmi to co je v base.html + pridej k tomu obsah mezi {block content}//-->

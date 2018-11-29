@@ -2,5 +2,33 @@
 {% block content %}
 
 <h2>Návod, jak pracovat s jídelníčkem, bez vypsane tabulky</h2>
+<!-- tady by mělo být jen to co není v base a ta base k tomu, ale nevím, jestli teda base potřebujeme, protože ten template mam vlastně tady a to by mohlo stačit//-->
+<div class="Album">
+	<div class="jumbotron zarovnani pozadi">
+			
+			<h1 class="display-4 nadpis">Vygenerujte si recepty dle Vašeho přání!</h1>
+			<p class="lead paragraf1a2">Vyfiltrujte si kategorii receptů, ze kterých chcete mít sestavený jídelníček.</p>
+			<hr class="my-4">
+			<p class="paragraf1a2">Až si vyberete, zda byste rádi recepty na hlavní jídlo, nebo raději dezerty, stiskněte Generuj recepty - a pak už jen stačí uvařit a nechat si chutnat!</p>
+			
+			<div class="input-group">
+					<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with b	<option selected>Choose...</option>
+					utton addon">
+						<option value="1">One</option>
+						<option value="2">Two</option>
+						<option value="3">Three</option>
+					</select>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" type="button">Button</button>
+					</div>
+			</div>
+		<br>
+		<a href="jidelnicek2.html" class="btn btn-success generuj" href="#" role="button">Generuj recepty!</a>
+		</div>
+
+</div>
+
+</body>
+</html>
 
 {% endblock %}
