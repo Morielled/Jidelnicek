@@ -1,6 +1,7 @@
 h1.nadpis{
 	 color: green;
 	 font-family: 'Mali', cursive;
+	 font-weight: bold;
 	}
 /*nadpis jidelnicek*/
 .zarovnani{
@@ -9,8 +10,8 @@ h1.nadpis{
 /*zarovnani cele sekce v jumbotronu na stred*/
 .pozadi{
 	background-image: url("cooking.jpg");
-	width: 1278px;
-	height: 605px;
+	width: 1280px;
+	height: 720px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -20,5 +21,14 @@ h1.nadpis{
 	margin-right: 0px;
 	text-align: center;
 }
-
 /*obrazek budu davat pres css kdyz ho chci prepsat v bootstrapu*/
+
+.paragraf1a2{
+	color: black;
+	font-family: 'Mali', cursive;
+	font-weight: bold;
+}
+.generuj{
+	color: white;
+	font-family: 'Mali', cursive;
+}
