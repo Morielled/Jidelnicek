@@ -54,7 +54,7 @@
 	<div class="card-body">
 		<h5 class="card-title">Název receptu</h5>
 		<p class="card-text">Budete potřebovat:</p>
-		<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+		<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
 	</div>
 </div>
 
@@ -68,7 +68,7 @@
 		<div class="card-body">
 			<h5 class="card-title">Název receptu</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -82,7 +82,7 @@
 		<div class="card-body">
 			<h5 class="card-title">Název receptu</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -96,7 +96,7 @@
 		<div class="card-body">
 			<h5 class="card-title">Název receptu</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -110,7 +110,7 @@
 		<div class="card-body">
 			<h5 class="card-title">Název receptu</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -122,16 +122,51 @@
 <br>
 <br>
 <div>
-<h3>Nákupní seznam</h3>
 
-<ul class="list-group">
-	<label for="radio"><input type="radio" id="yes" name="vyberingredience" value="yes"></label>
+<div class="">
+		<h3>Nákupní seznam</h3>		
+<div class="checkbox">
+		<label><input type="checkbox" value="">První ingredience</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" value="">Druhá ingredience</label>
+			</div>
+			<div class="checkbox disabled">
+				<label><input type="checkbox" value="">Třetí ingredience</label>
+			</div> 
+			<div class="checkbox disabled">
+				<label><input type="checkbox" value="">Čtvrtá ingredience</label>
+			</div> 
+			<div class="checkbox disabled">
+				<label><input type="checkbox" value="">Pátá ingredience</label>
+			</div> 
+			<div class="checkbox disabled">
+				<label><input type="checkbox" value="">Šestá ingredience</label>
+			</div> 
+			<div class="checkbox disabled">
+				<label><input type="checkbox" value="">Sedmá ingredience</label>
+			</div> 
+
+<!--Dole pod tímto mám hozené další možnosti jak udělat nákupní seznam, ale checkbox mi nedovoluje checknout víc jak jednu ingredienci a ještě to není srovnané pořádně-->
+
+<!--<ul class="list-group">
+		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
+		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
+		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
+		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
+		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
+	</ul>-->
+
+<!--<ul class="list-group">
 		<li class="list-group-item">Jedna ingredience</li>
 		<li class="list-group-item">Druhá ingredience</li>
 		<li class="list-group-item">Třetí ingredience</li>
 		<li class="list-group-item">Čtvrtá ingredience</li>
 		<li class="list-group-item">Pátá ingredience</li>
-	</ul>
+	</ul>-->
+
+	</div>
+
 	<!--{% for rec in recept %}
 	<li>{{rec}}</li>
 	{% endfor %}-->
