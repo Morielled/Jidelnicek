@@ -8,19 +8,22 @@ h1.nadpis{
 		text-align: center;
 }
 /*zarovnani cele sekce v jumbotronu na stred*/
+/*jidelnicek2 potřebuje to backround size - cover, ostatní naopak width a height, ale pak to není responzivní všude, musí být ještě nějaké řešení... případně na jídelníček2 může být i nákupní seznam na bílém pozadí ne na obrázku a vypadá to v poho */
 .pozadi{
 	background-image: url("cooking.jpg");
-	width: 1280px;
-	height: 720px;
+	background-size: cover;
+	/*width: 1280px;
+	height: 720px;*/
+	/*height: 100%;*/
 	margin-left: auto;
 	margin-right: auto;
 }
-.jumbotron{
+/*.jumbotron{
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
 	text-align: center;
-}
+}*/
 /*obrazek budu davat pres css kdyz ho chci prepsat v bootstrapu*/
 
 .paragraf1a2{
