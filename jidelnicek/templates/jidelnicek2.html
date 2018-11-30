@@ -20,6 +20,8 @@
 <!--<h2>Návod, jak pracovat s jídelníčkem + uz vygenerovana tabulka</h2>-->
 <!-- tabulky nahoře má být recept, pak ingredience a pod tim go to recept na webu a mají být vedle sebe což nevim jak udělam a stejně to nevypadá jako tabulka viz zde, jak to má vypadat:http://getbootstrap.com/docs/4.1/components/card/ -->
 
+<!--je treba roztáhnout ten obrázek v pozadí na celé-->
+
 <div class="jumbotron zarovnani pozadi">
 
 	<h1 class="display-4 nadpis">Vygenerujte si recepty dle Vašeho přání!</h1>
@@ -40,70 +42,106 @@
 	</div>
 <br>
 <a href="jidelnicek2.html" class="btn btn-success generuj" href="#" role="button">Generuj recepty!</a>
+
+<br>
+<br>
+<br>
+<br>
+<div class="row card-deck">
+
+<div class="card karta bg-light" style="width: 20rem;"> 
+	<img class="card-img-top img-fluid" src=".../100px180/" alt="Card image cap">
+	<div class="card-body">
+		<h5 class="card-title">Název receptu</h5>
+		<p class="card-text">Budete potřebovat:</p>
+		<a href="#" button type="button" class="btn btn-success">Recept zde</a>
+	</div>
 </div>
 
-<!--Vygeneruje seznam receptu - v image bude foto receptu, pod tím název, pod tím potřebné ingredience a pod tím odkaz přes tlačítko na web fitrecepty a tam je recept-->
+<br>
+<br>
+<br>
+<br>
 
-<div class="card" style="width: 18rem;">
+<div class="card karta bg-light" style="width: 20rem;">
 		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">Název receptu</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" class="btn btn-primary">Recept zde</a>
+			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
 		</div>
 	</div>
 
-	<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src=".../100px180/" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Název receptu</h5>
-				<p class="card-text">Budete potřebovat:</p>
-				<a href="#" class="btn btn-primary">Recept zde</a>
-			</div>
-		</div>
+<br>
+<br>
+<br>
+<br>
 
-	<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src=".../100px180/" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Název receptu</h5>
-				<p class="card-text">Budete potřebovat:</p>
-				<a href="#" class="btn btn-primary">Recept zde</a>
-			</div>
+<div class="card karta bg-light" style="width: 20rem;">
+		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Název receptu</h5>
+			<p class="card-text">Budete potřebovat:</p>
+			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
 		</div>
+	</div>
 
-	<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src=".../100px180/" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Název receptu</h5>
-				<p class="card-text">Budete potřebovat:</p>
-				<a href="#" class="btn btn-primary">Recept zde</a>
-			</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="card karta bg-light" style="width: 20rem;">
+		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Název receptu</h5>
+			<p class="card-text">Budete potřebovat:</p>
+			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
 		</div>
+	</div>
 
-	<div class="card" style="width: 18rem;">
-			<img class="card-img-top" src=".../100px180/" alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Název receptu</h5>
-				<p class="card-text">Budete potřebovat:</p>
-				<a href="#" class="btn btn-primary">Recept zde</a>
-			</div>
+<br>
+<br>
+<br>
+<br>
+
+<div class="card karta bg-light" style="width: 20rem;">
+		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Název receptu</h5>
+			<p class="card-text">Budete potřebovat:</p>
+			<a href="#" button type="button" class="btn btn-success">Recept zde</a>
 		</div>
+	</div>
 
+<br>
+</div>
 <!--Vygeneruje seznam receptu-->
-<h3>Nákupní seznam</h3>
+<br>
+<br>
+<br>
+<br>
 <div>
-	<ul class="list-group">
-			<li class="list-group-item">Jedna ingredience</li>
-			<li class="list-group-item">Druhá ingredience</li>
-			<li class="list-group-item">Třetí ingredience</li>
-			<li class="list-group-item">Čtvrtá ingredience</li>
-			<li class="list-group-item">Pátá ingredience</li>
-		</ul>
-		<!--{% for rec in recept %}
-		<li>{{rec}}</li>
-		{% endfor %}-->
+<h3>Nákupní seznam</h3>
+
+<ul class="list-group">
+	<label for="radio"><input type="radio" id="yes" name="vyberingredience" value="yes"></label>
+		<li class="list-group-item">Jedna ingredience</li>
+		<li class="list-group-item">Druhá ingredience</li>
+		<li class="list-group-item">Třetí ingredience</li>
+		<li class="list-group-item">Čtvrtá ingredience</li>
+		<li class="list-group-item">Pátá ingredience</li>
+	</ul>
+	<!--{% for rec in recept %}
+	<li>{{rec}}</li>
+	{% endfor %}-->
 
 </div>
+
+</div>
+
+<!--Vygeneruje seznam receptu - v image bude foto receptu, pod tím název, pod tím potřebné ingredience a pod tím odkaz přes tlačítko na web fitrecepty a tam je recept-->
+
 
 </body>
 </html>
