@@ -24,7 +24,7 @@ class Recepty(db.Model):
 					return f"Název receptu: {self.title} a URL: {self.url}"
 
 
-
+'''
 class Ingredience(db.Model):
 
 			__tablename__ = "ingredience"
@@ -59,4 +59,4 @@ class Tagy(db.Model):
 					self.nase_tagy = nase_tagy
 			
 			def __repr__(self):
-					return f"K receptu {self.id} jsou přiřazeny tyto tagy: {self.nase_tagy}"
+					return f"K receptu {self.id} jsou přiřazeny tyto tagy: {self.nase_tagy}" '''

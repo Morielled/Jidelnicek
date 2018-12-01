@@ -25,6 +25,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #Migrate(app,db)
 
+from jidelnicek.models import Recepty
+
 ###############################
 ###### ROUTES #################
 ###############################
@@ -40,8 +42,8 @@ def jidelnicek():
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
 
-		#recept = Recepty.query.limit(5).all()
-		return render_template('jidelnicek2.html') #, recept=recept)
+		recept = Recepty.query.limit(5).all()
+		return render_template('jidelnicek2.html', recept=recept)
 
 @app.errorhandler(404)
 def error_404(error):
