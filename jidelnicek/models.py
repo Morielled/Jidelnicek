@@ -1,4 +1,4 @@
-"""from jidelnicek import db
+from jidelnicek import db
 
 #creating model (=table)
 class Jidelnicek(db.Model):
@@ -49,4 +49,3 @@ class Tagy(db.Model):
 			
 			def __repr__(self):
 					return f"K receptu {self.title} jsou přiřazeny tyto tagy: {self.nase_tagy}"
-"""
