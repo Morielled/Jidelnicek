@@ -17,7 +17,7 @@ app = Flask (__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 #sets up the database location
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir, 'jidelnicek.db')
 
 #does not track all the modifications in the database
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -36,11 +36,11 @@ def index():
 def jidelnicek():
 		return render_template('jidelnicek.html')
 
-@app.route('/jidelnicek2')
-def jidel_planovac():
+@app.route('/jidelnicek_plan')
+def jidelnicek_plan():
 
-		#recept = Jidelnicek.query.limit(5).all()
-		return render_template('jidelnicek2.html')#, recept=recept)
+		recept = Recepty.query.limit(5).all()
+		return render_template('jidelnicek2.html') #, recept=recept)
 
 @app.errorhandler(404)
 def error_404(error):
