@@ -40,7 +40,7 @@ def jidelnicek():
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
 
-		recept = Recepty.query.limit(5).all()
+		#recept = Recepty.query.limit(5).all()
 		return render_template('jidelnicek2.html') #, recept=recept)
 
 @app.errorhandler(404)
