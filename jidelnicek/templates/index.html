@@ -11,21 +11,27 @@
 		<link rel="stylesheet" href="/static/style.css" />
 
 		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
-
+		<style>
+				h1.ex1 {
+						margin: 100px 70px 50px;
+				
+				}
+				
+				</style>
   </head>
-  <body>
+  <body background="/static/cooking.jpg" class="pozadi">
 			
 	<div>
 			
-			<div class="jumbotron-fluid zarovnani pozadi">
-				<div class="container">
-					<h1 class="display-4 nadpis">JÍDELNÍČEK</h1>
+			<div class="zarovnani">
+				<div class="container-fluid">
+					
+					<h1 class="display-4 nadpis ex1">JÍDELNÍČEK</h1>
 					<p class="lead paragraf1a2">Také si vždy lámete hlavu nad tím, co budete dnes vařit?</p>
 					<hr class="my-4">
 					<p class="paragraf1a2">Pojďte si s námi vytvořit jídelníček a nákupní seznam na příští týden a máte o starost méně!</p>
 					<br>
-					<!-- odkazy na tlacitka nevyplnuj, to musim ja -->
-					<a class="btn btn-success generuj" href="{{ url_for('jidelnicek') }}" role="button">Co bude k obědu?</a>
+					<a href="jidelnicek.html" class="btn btn-success generuj" href="{{ url_for('jidelnicek') }}" role="button">Co bude k obědu?</a>
 				</div>
 			</div>
 				<!-- <a href="index.html"><img src="cooking.jpg" alt="" class="pozadi">></a>//-->
