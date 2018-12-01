@@ -10,7 +10,7 @@ h1.nadpis{
 /*zarovnani cele sekce v jumbotronu na stred*/
 /*jidelnicek2 potřebuje to backround size - cover, ostatní naopak width a height, ale pak to není responzivní všude, musí být ještě nějaké řešení... případně na jídelníček2 může být i nákupní seznam na bílém pozadí ne na obrázku a vypadá to v poho */
 .pozadi{
-	background-image: url("cooking.jpg");
+  background-image: url("cooking.jpg");
 	background-size: cover;
 	/*width: 1280px;
 	height: 720px;*/

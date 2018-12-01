@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask (__name__)
 
 #configuration for the forms
-app.config['SECRET_KEY'] = 'mysecretkey'
+#app.config['SECRET_KEY'] = 'mysecretkey'
 
 ###################################
 ### MODELS SET UP #################
