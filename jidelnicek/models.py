@@ -10,7 +10,8 @@ class Recepty(db.Model):
 			foto = db.Column(db.String(100))
 
 #nastavit relationship
-# xyz = db.relationship('Tagy', backref='xzy', lazy=True)
+			#ingredience = db.relationship('Ingredience', backref='recepty', lazy='dynamic')
+			#tagy = db.relationship('Tagy', backref='recepty', lazy='dynamic')
 
 ##Neni nutne mit napsane
 			def _init_(self,url,title,foto):
@@ -30,7 +31,7 @@ class Ingredience(db.Model):
 
 			#jidelnicek = db.relationship(Jidelnicek)
 
-			id = db.Column(db.Integer, db.ForeignKey('recepty.url'))
+			id = db.Column(db.Integer, db.ForeignKey('recepty.id'))
 			ingredience = db.Column(db.String(100))
 			nazev_ingredience = db.Column(db.String(30))
 
@@ -50,7 +51,7 @@ class Tagy(db.Model):
 
 			#jidelnicek = db.relationship(Jidelnicek)
 
-			id = db.Column(db.Integer,db.ForeignKey('recepty.url'))
+			id = db.Column(db.Integer,db.ForeignKey('recepty.id'))
 			nase_tagy = db.Column(db.String(20))
 
 			def _init_(self,nase_tagy):
