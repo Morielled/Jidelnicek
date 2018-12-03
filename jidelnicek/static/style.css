@@ -39,7 +39,14 @@ h1.nadpis{
 	color: black;
 	font-family: 'Mali', cursive;
 }
+.ingredience{
+	color: black;
+	font-family: 'Calibri', cursive;
+}
 .obrazekreceptu{
   height: 8rem;
 }
 /*aby byla stejná velikost všech obrázků receptů v pětidenním výčtu*/
+.zarovnaniingredienci{
+	text-align: left;
+}

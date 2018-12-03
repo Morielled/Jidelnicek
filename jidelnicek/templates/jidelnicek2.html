@@ -55,9 +55,9 @@
 	<img class="card-img-top img-fluid obrazekreceptu" src="{{ nazev1.foto }}" alt="Card image cap">
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev1.title }}</h5>
-		<p class="card-text">Budete potřebovat:</p>
+		<p class="card-text ingredience">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
-			<div>
+			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre1 %}
 					<label><input type="checkbox" value="">{{ing}}</label>	
 					{% endfor %}
@@ -75,8 +75,8 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev2.title }}</h5>
-			<p class="card-text">Budete potřebovat:</p>
-			<div>
+			<p class="card-text ingredience">Budete potřebovat:</p>
+			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre2 %}
 					<label><input type="checkbox" value="">{{ing}}</label>	
 					{% endfor %}
@@ -94,8 +94,8 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev3.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev3.title }}</h5>
-			<p class="card-text">Budete potřebovat:</p>
-			<div>
+			<p class="card-text ingredience">Budete potřebovat:</p>
+			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre3 %}
 					<label><input type="checkbox" value="">{{ing}}</label>	
 					{% endfor %}
@@ -113,8 +113,8 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev4.title }}</h5>
-			<p class="card-text">Budete potřebovat:</p>
-			<div>
+			<p class="card-text ingredience">Budete potřebovat:</p>
+			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre4 %}
 					<label><input type="checkbox" value="">{{ing}}</label>	
 					{% endfor %}
@@ -132,8 +132,8 @@
 	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto }}" alt="Card image cap">
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev5.title }}</h5>
-		<p class="card-text">Budete potřebovat:</p>
-		<div>
+		<p class="card-text ingredience">Budete potřebovat:</p>
+		<div class="zarovnaniingredienci ingredience">
 				{%  for ing in ingre5 %}
 				<label><input type="checkbox" value="">{{ing}}</label>	
 				{% endfor %}
