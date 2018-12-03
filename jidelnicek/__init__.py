@@ -52,24 +52,24 @@ def jidelnicek_plan():
 		
 		if nazev1:
 				return render_template('jidelnicek2.html', nazev1=nazev1)
-		elif nazev2:
-				return render_template('jidelnicek2.html', nazev2=nazev2)
-		elif nazev3:
-				return render_template('jidelnicek2.html', nazev3=nazev3)
-		elif nazev4:
-				return render_template('jidelnicek2.html', nazev4=nazev4)
-		elif nazev5:
-				return render_template('jidelnicek2.html', nazev5=nazev5)
+					if nazev2:
+						return render_template('jidelnicek2.html', nazev2=nazev2)
+							if nazev3:
+								return render_template('jidelnicek2.html', nazev3=nazev3)
+									if nazev4:
+										return render_template('jidelnicek2.html', nazev4=nazev4)
+											if nazev5:
+												return render_template('jidelnicek2.html', nazev5=nazev5)
 		else:
 				return render_template('jidelnicek2.html', nazev1=nazev1)
 
 
-''' nahrani ingredienci k receptu
+''' 
 
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
 		nazev = Recepty.query.order_by(func.random()).first()
-
+#zahrnuti ingredienci do receptu
 		#ingre = Ingredience.query.filter_by(recepty_id = nazev.id).all()
 		ingre = db.session.query(Recepty, Ingredience)\
 														.join(Ingredience, Ingredience.recepty_id == Recepty.id).all()
