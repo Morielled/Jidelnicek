@@ -41,31 +41,32 @@ def index():
 def jidelnicek():
 		return render_template('jidelnicek.html')
 
+
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
-# snaha o 5 ruznych randon receptu
+# 5 ruznych random receptu
 		nazev1 = Recepty.query.order_by(func.random()).first()
 		nazev2 = Recepty.query.order_by(func.random()).first()
 		nazev3 = Recepty.query.order_by(func.random()).first()
 		nazev4 = Recepty.query.order_by(func.random()).first()
 		nazev5 = Recepty.query.order_by(func.random()).first()
 		
-		if nazev1:
-				return render_template('jidelnicek2.html', nazev1=nazev1)
-					if nazev2:
-						return render_template('jidelnicek2.html', nazev2=nazev2)
-							if nazev3:
-								return render_template('jidelnicek2.html', nazev3=nazev3)
-									if nazev4:
-										return render_template('jidelnicek2.html', nazev4=nazev4)
-											if nazev5:
-												return render_template('jidelnicek2.html', nazev5=nazev5)
-		else:
-				return render_template('jidelnicek2.html', nazev1=nazev1)
+		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5)
 
+''' dalsi pokus o random
+@app.route('/jidelnicek_plan')
+def jidelnicek_plan():
+		
+		nazev = Recepty.query.options(load_only('id')).offset(
+            func.floor(
+                func.random() *
+                db.session.query(func.count(Recepty.id))
+            )
+        		).limit(1).all() 
+    return render_template('jidelnicek2.html', nazev=nazev)
+'''
 
-''' 
-
+'''
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
 		nazev = Recepty.query.order_by(func.random()).first()
@@ -77,16 +78,17 @@ def jidelnicek_plan():
 					return render_template('jidelnicek2.html', ingre=ingre)
 		else:
 					return render_template('jidelnicek2.html', nazev=nazev)
-'''
 
+'''
 #my_ingredience.recepty
 
 #nove generovani receptu
 @app.route('/jidelnicek_plan_new')
 def jidelnicek_plan_new():
-		nazev = Recepty.query.order_by(func.random()).first()
-		return render_template('jidelnicek2.html', nazev=nazev)
+		nazev11 = nazev1
 
+		
+		return render_template('jidelnicek2.html', nazev11=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5)
 
 
 @app.errorhandler(404)
