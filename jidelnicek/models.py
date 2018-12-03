@@ -10,8 +10,8 @@ class Recepty(db.Model):
 			foto = db.Column(db.String(100))
 
 #nastavit relationship
-			ingredience = db.relationship('Ingredience', backref='recepty', lazy='dynamic')
-			tagy = db.relationship('Tagy', backref='recepty', lazy='dynamic')
+			ingredience = db.relationship('Ingredience', backref='recept', lazy=True)
+		#	tagy = db.relationship('Tagy', backref='recepty', lazy='dynamic')
 
 			def _init_(self,url,title,foto):
 
@@ -20,7 +20,8 @@ class Recepty(db.Model):
 					self.foto = foto 
 
 			def __repr__(self):
-					return f"{self.title}"
+						return f"{self.title, self.url, self.foto}"
+
 
 
 
@@ -31,9 +32,9 @@ class Ingredience(db.Model):
 			#jidelnicek = db.relationship(Jidelnicek)
 
 			id = db.Column(db.Integer, primary_key=True)
+			recepty_id = db.Column(db.Integer, db.ForeignKey('recepty.id'))
 			ingredience = db.Column(db.String(100))
 			nazev_ingredience = db.Column(db.String(30))
-			recepty_id = db.Column(db.Integer, db.ForeignKey('recepty.id') )
 
 			def __init__(self,ingredience,nazev_ingredience):
 
@@ -41,10 +42,10 @@ class Ingredience(db.Model):
 					self.nazev_ingredience = nazev_ingredience
 			
 			def __repr__(self):
-					return f"{self.ingredience}"
+					return f"{self.ingredience}, {self.nazev_ingredience}"
 
 
-
+'''
 class Tagy(db.Model):
 		
 			__tablename__ = "tagy"
@@ -60,4 +61,5 @@ class Tagy(db.Model):
 					self.nase_tagy = nase_tagy
 			
 			def __repr__(self):
-					return f"K receptu {self.id} jsou přiřazeny tyto tagy: {self.nase_tagy}"
+					return f"K receptu {self.id} jsou přiřazeny tyto tagy: {self.nase_tagy}" 
+					'''

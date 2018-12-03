@@ -26,7 +26,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #Migrate(app,db)
 
-from jidelnicek.models import Recepty, Tagy, Ingredience
+from jidelnicek.models import Recepty, Ingredience
+
 
 ###############################
 ###### ROUTES #################
@@ -42,10 +43,43 @@ def jidelnicek():
 
 @app.route('/jidelnicek_plan')
 def jidelnicek_plan():
+# snaha o 5 ruznych randon receptu
+		nazev1 = Recepty.query.order_by(func.random()).first()
+		nazev2 = Recepty.query.order_by(func.random()).first()
+		nazev3 = Recepty.query.order_by(func.random()).first()
+		nazev4 = Recepty.query.order_by(func.random()).first()
+		nazev5 = Recepty.query.order_by(func.random()).first()
+		
+		if nazev1:
+				return render_template('jidelnicek2.html', nazev1=nazev1)
+		elif nazev2:
+				return render_template('jidelnicek2.html', nazev2=nazev2)
+		elif nazev3:
+				return render_template('jidelnicek2.html', nazev3=nazev3)
+		elif nazev4:
+				return render_template('jidelnicek2.html', nazev4=nazev4)
+		elif nazev5:
+				return render_template('jidelnicek2.html', nazev5=nazev5)
+		else:
+				return render_template('jidelnicek2.html', nazev1=nazev1)
+
+
+''' nahrani ingredienci k receptu
+
+@app.route('/jidelnicek_plan')
+def jidelnicek_plan():
 		nazev = Recepty.query.order_by(func.random()).first()
-		return render_template('jidelnicek2.html', nazev=nazev)
 
+		#ingre = Ingredience.query.filter_by(recepty_id = nazev.id).all()
+		ingre = db.session.query(Recepty, Ingredience)\
+														.join(Ingredience, Ingredience.recepty_id == Recepty.id).all()
+		if nazev.id == ingre:
+					return render_template('jidelnicek2.html', ingre=ingre)
+		else:
+					return render_template('jidelnicek2.html', nazev=nazev)
+'''
 
+#my_ingredience.recepty
 
 #nove generovani receptu
 @app.route('/jidelnicek_plan_new')
@@ -54,21 +88,6 @@ def jidelnicek_plan_new():
 		return render_template('jidelnicek2.html', nazev=nazev)
 
 
-'''	ingredience = Recepty.query.order_by(func.random()).first()
-		return render_template('jidelnicek2.html', ingredience=ingredience) '''
-
-'''
-@app.route('/jidelnicek_plan')
-def jidelnicek_plan():
-
-		nazev = Recepty.query.order_by(func.rand()).first()
-		#nazev = session.query(Recepty).order_by(func.rand()).limit(1)
-						#return render_template('jidelnicek2.html', nazev=nazev)
-		#select.order_by(func.random()).limit(1)
-		recept = Recepty.query.limit(1).all()
-		#vypis ingredienci
-		#ingredience = Ingredience.ingredience.query.all()
-		return render_template('jidelnicek2.html', recept=recept) '''
 
 @app.errorhandler(404)
 def error_404(error):

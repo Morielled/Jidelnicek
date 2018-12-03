@@ -52,17 +52,17 @@
 <div class="row card-deck">
 
 <div class="card karta bg-light" style="width: 20rem;"> 
-	<img class="card-img-top img-fluid" src=".../100px180/" alt="Card image cap">
+	<img class="card-img-top img-fluid" src="{{ nazev1.foto }}" alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ nazev }}</h5>
+		<h5 class="card-title">{{ nazev1.title }}</h5>
 		<p class="card-text">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
-	<!--<div class="checkbox">
-		{  for rec in nazev  }
-			<label><input type="checkbox" value="">{{nazev}}</label>
-		{ endfor }	
-	</div>-->
-		<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<div>
+					{%  for ing in ingre %}
+						<li>{{ingre}}</li>
+					{% endfor %}
+			</div>
+		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 	</div>
 </div>
 
@@ -72,11 +72,11 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<img class="card-img-top" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev }}</h5>
+			<h5 class="card-title">{{ nazev2.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -86,11 +86,11 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<img class="card-img-top" src="{{ nazev3.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev }}</h5>
+			<h5 class="card-title">{{ nazev3.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -100,11 +100,11 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+		<img class="card-img-top" src="{{ nazev4.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev }}</h5>
+			<h5 class="card-title">{{ nazev4.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
-			<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -114,11 +114,11 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-	<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+	<img class="card-img-top" src="{{ nazev5.foto }}" alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ nazev }}</h5>
+		<h5 class="card-title">{{ nazev5.title }}</h5>
 		<p class="card-text">Budete potřebovat:</p>
-		<a href="#" button type="button" class="btn btn-success">Zobrazit recept</a>
+		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 	</div>
 </div>
 
@@ -132,6 +132,7 @@
 <br>
 <div>
 
+<!--
 <div class="">
 		<h3>Nákupní seznam</h3>		
 <div class="checkbox">
@@ -157,12 +158,12 @@
 			</div>
 			<br>
 			<br>
-				<!--<form href = "{{ url_for('jidelnicek_plan_new') }}" method="post">
-					<button class="btn btn-success generuj" name="jidel_new" type="submit">Generuj recepty!</button>
-				</form>-->
+-->
 			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_new') }}" role="button">Generuj recepty!</a>
 			<br>
 			<br>
+
+
 
 <!--Dole pod tímto mám hozené další možnosti jak udělat nákupní seznam, ale checkbox mi nedovoluje checknout víc jak jednu ingredienci a ještě to není srovnané pořádně-->
 
