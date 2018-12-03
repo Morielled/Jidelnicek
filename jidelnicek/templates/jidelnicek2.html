@@ -58,8 +58,8 @@
 		<p class="card-text">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
 			<div>
-					{%  for ing in ingre %}
-						<li>{{ingre}}</li>
+					{%  for ing in ingre1 %}
+					<label><input type="checkbox" value="">{{ing}}</label>	
 					{% endfor %}
 			</div>
 		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
@@ -76,6 +76,11 @@
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev2.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
+			<div>
+					{%  for ing in ingre2 %}
+					<label><input type="checkbox" value="">{{ing}}</label>	
+					{% endfor %}
+			</div>
 			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
@@ -90,6 +95,11 @@
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev3.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
+			<div>
+					{%  for ing in ingre3 %}
+					<label><input type="checkbox" value="">{{ing}}</label>	
+					{% endfor %}
+			</div>
 			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
@@ -104,6 +114,11 @@
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev4.title }}</h5>
 			<p class="card-text">Budete potřebovat:</p>
+			<div>
+					{%  for ing in ingre4 %}
+					<label><input type="checkbox" value="">{{ing}}</label>	
+					{% endfor %}
+			</div>
 			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
@@ -118,6 +133,11 @@
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev5.title }}</h5>
 		<p class="card-text">Budete potřebovat:</p>
+		<div>
+				{%  for ing in ingre5 %}
+				<label><input type="checkbox" value="">{{ing}}</label>	
+				{% endfor %}
+		</div>
 		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 	</div>
 </div>

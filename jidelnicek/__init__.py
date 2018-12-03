@@ -51,7 +51,14 @@ def jidelnicek_plan():
 		nazev4 = Recepty.query.order_by(func.random()).first()
 		nazev5 = Recepty.query.order_by(func.random()).first()
 		
-		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5)
+		#zahrnuti ingredienci do receptu
+		ingre1 = db.session.query(Ingredience.ingredience).filter_by(recepty_id = nazev1.id).all()
+		ingre2 = Ingredience.query.filter_by(recepty_id = nazev2.id).all()
+		ingre3 = Ingredience.query.filter_by(recepty_id = nazev3.id).all()
+		ingre4 = Ingredience.query.filter_by(recepty_id = nazev4.id).all()
+		ingre5 = Ingredience.query.filter_by(recepty_id = nazev5.id).all()
+
+		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre1=ingre1, ingre2=ingre2, ingre3=ingre3, ingre4=ingre4, ingre5=ingre5)
 
 ''' dalsi pokus o random
 @app.route('/jidelnicek_plan')
