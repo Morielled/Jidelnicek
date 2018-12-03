@@ -59,7 +59,7 @@
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre11 %}
-					<label><input type="checkbox" value="">{{ing}}</label>	
+					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
 		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
@@ -78,7 +78,7 @@
 			<p class="card-text ingredience">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre21 %}
-					<label><input type="checkbox" value="">{{ing}}</label>	
+					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
 			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
@@ -97,7 +97,7 @@
 			<p class="card-text ingredience">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre31 %}
-					<label><input type="checkbox" value="">{{ing}}</label>	
+					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
 			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
@@ -116,7 +116,7 @@
 			<p class="card-text ingredience">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre41 %}
-					<label><input type="checkbox" value="">{{ing}}</label>	
+					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
 			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
@@ -135,7 +135,7 @@
 		<p class="card-text ingredience">Budete potřebovat:</p>
 		<div class="zarovnaniingredienci ingredience">
 				{%  for ing in ingre51 %}
-				<label><input type="checkbox" value="">{{ing}}</label>	
+				<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 				{% endfor %}
 		</div>
 		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
@@ -155,31 +155,14 @@
 
 <div class="">
 		<h3>Nákupní seznam</h3>		
-<div class="checkbox">
-		<label><input type="checkbox" value="">První ingredience</label>
-			</div>
-			<div class="checkbox">
-				<label><input type="checkbox" value="">Druhá ingredience</label>
-			</div>
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Třetí ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Čtvrtá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Pátá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Šestá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Sedmá ingredience</label>
-			</div>
+		<div class="checkbox">
+			{%  for ing in ingre11 %}
+			<li>{{ing}}</li>	</br>
+			{% endfor %}
+		</div>
 			<br>
 			<br>
--->
-			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_new') }}" role="button">Generuj recepty!</a>
+			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_new') }}" role="button">Generuj nové recepty!</a>
 			<br>
 			<br>
 
