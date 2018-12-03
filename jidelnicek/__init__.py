@@ -85,10 +85,13 @@ def jidelnicek_plan():
 #nove generovani receptu
 @app.route('/jidelnicek_plan_new')
 def jidelnicek_plan_new():
-		nazev11 = nazev1
-
+		nazev1 = Recepty.query.order_by(func.random()).first()
+		nazev2 = Recepty.query.order_by(func.random()).first()
+		nazev3 = Recepty.query.order_by(func.random()).first()
+		nazev4 = Recepty.query.order_by(func.random()).first()
+		nazev5 = Recepty.query.order_by(func.random()).first()
 		
-		return render_template('jidelnicek2.html', nazev11=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5)
+		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5)
 
 
 @app.errorhandler(404)
