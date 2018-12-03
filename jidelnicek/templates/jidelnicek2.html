@@ -24,18 +24,18 @@
 	</head>
 <body background="/static/cooking.jpg" class="pozadi">
 
-<!--<h2>Návod, jak pracovat s jídelníčkem + uz vygenerovana tabulka</h2>-->
-<!-- tabulky nahoře má být recept, pak ingredience a pod tim go to recept na webu a mají být vedle sebe což nevim jak udělam a stejně to nevypadá jako tabulka viz zde, jak to má vypadat:http://getbootstrap.com/docs/4.1/components/card/ -->
-
-<!--je treba roztáhnout ten obrázek v pozadí na celé-->
 
 <div class="container zarovnani">
 
-	<h1 class="display-4 nadpis ex1">Vygenerujte si recepty dle Vašeho přání!</h1>
-	<p class="lead paragraf1a2">Vyfiltrujte si kategorii receptů, ze kterých chcete mít sestavený jídelníček.</p>
+	<h1 class="display-4 nadpis ex1">Naplánujte si jídelníček na příští týden!</h1>
+	<p class="paragraf1a2">Pokud se Vám vybraná kombinece nelíbí, vybírejte pomocí tlačítka Chci jiné recepty, dokud nebudete spokojení.</p>
+	<p class="paragraf1a2">Zaškrtněte suroviny, které doma nemáte a musíte je dokoupit.</p>
+	<p class="paragraf1a2">Vytvořte si nákupní seznam, pomocí tlačítka Chci vidět nákupní seznam.</p>
 	<hr class="my-4">
-	<p class="paragraf1a2">Až si vyberete, zda byste rádi recepty na hlavní jídlo, nebo raději dezerty, stiskněte Generuj recepty - a pak už jen stačí uvařit a nechat si chutnat!</p>
+	<p class="paragraf1a2">A pak už jen stačí uvařit a nechat si chutnat! :-)</p>
+	<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan') }}" role="button">Chci jiné recepty!</a>
 
+<!-- filtry
 	<div class="input-group">
 			<select class="custom-select" id="inputGroupSelect04" aria-label="Example select with b	<option selected>Choose...</option>
 			utton addon">
@@ -46,7 +46,7 @@
 			<div class="input-group-append">
 				<button class="btn btn-outline-secondary" type="button">Filter receptů</button>
 			</div>
-	</div>
+	</div> -->
 <br>
 <br>
 <div class="row card-deck">
@@ -145,44 +145,19 @@
 
 <br>
 </div>
-<!--Vygeneruje seznam receptu-->
 <br>
 <br>
 <br>
 <br>
 <div>
 
-<!--
-<div class="">
-		<h3>Nákupní seznam</h3>		
-<div class="checkbox">
-		<label><input type="checkbox" value="">První ingredience</label>
-			</div>
-			<div class="checkbox">
-				<label><input type="checkbox" value="">Druhá ingredience</label>
-			</div>
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Třetí ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Čtvrtá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Pátá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Šestá ingredience</label>
-			</div> 
-			<div class="checkbox disabled">
-				<label><input type="checkbox" value="">Sedmá ingredience</label>
-			</div>
-			<br>
-			<br>
--->
-			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_new') }}" role="button">Chci jiné recepty!</a>
+
+			<p class="paragraf1a2">Pokud jste spokojeni s výběrem receptů, zašktněte si ingredience, které Vám doma chybí a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
 			<br>
 			<br>
 			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám vybráno! Chci vidět nákupní seznam</a>
+			<br>
+			<br>
 
 
 
