@@ -3,7 +3,7 @@ from flask import Flask, session, request
 from flask import render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
-from jidelnicek.forms import 
+#from jidelnicek.forms import 
 #import pdfkit
 
 app = Flask (__name__)
