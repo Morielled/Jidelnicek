@@ -59,7 +59,7 @@
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre11 %}
-					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
+					<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
 		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
@@ -155,7 +155,7 @@
 			<p class="paragraf1a2">Pokud jste spokojeni s výběrem receptů, zašktněte si ingredience, které Vám doma chybí a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
 			<br>
 			<br>
-			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám vybráno! Chci vidět nákupní seznam</a>
+			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám hotovo! Chci vidět nákupní seznam</a>
 			<br>
 			<br>
 

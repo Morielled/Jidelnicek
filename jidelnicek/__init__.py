@@ -3,7 +3,7 @@ from flask import Flask, session, request
 from flask import render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
-#from flask_migrate import Migrate
+import pdfkit
 
 app = Flask (__name__)
 
@@ -94,7 +94,6 @@ def jidelnicek_plan_seznam():
 		ingre31 = [item[0] for item in ingre3]
 		ingre41 = [item[0] for item in ingre4]
 		ingre51 = [item[0] for item in ingre5]
-
 
 		return render_template('jidelnicek3.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51)
 
