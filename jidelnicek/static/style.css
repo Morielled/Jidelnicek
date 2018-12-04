@@ -63,3 +63,7 @@ h1.nadpis{
 .pozadinakupseznamu{
 	background-color: rgba(255, 255, 255, 0.9);
 }
+.nakupniseznam{
+	text-align: left;
+	margin-left: 25%;
+}
