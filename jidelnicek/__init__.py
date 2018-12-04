@@ -3,12 +3,13 @@ from flask import Flask, session, request
 from flask import render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
-import pdfkit
+from jidelnicek.forms import 
+#import pdfkit
 
 app = Flask (__name__)
 
 #configuration for the forms
-app.config['SECRET_KEY'] = 'mysecretkey'
+app.config['SECRET_KEY'] = 'development'
 
 ###################################
 ### MODELS SET UP #################
@@ -24,7 +25,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir, 'jide
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-#Migrate(app,db)
+
 
 from jidelnicek.models import Recepty, Ingredience
 
@@ -37,6 +38,7 @@ from jidelnicek.models import Recepty, Ingredience
 def index():
 		return render_template('index.html')
 
+#prozatim schovat, nez budou filtry
 #@app.route('/jidelnicek')
 #def jidelnicek():
 #		return render_template('jidelnicek.html')
@@ -64,10 +66,6 @@ def jidelnicek_plan():
 		ingre41 = [item[0] for item in ingre4]
 		ingre51 = [item[0] for item in ingre5]
 
-
-		if request.form.get('check_ingre'):
-			return render_template('jidelnicek3.html', ingre11=ingre11, ingre21=ingre21, ingre31=ingre31,
-		 					ingre41=ingre41, ingre51=ingre51) 
 		
 		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51)
 
@@ -94,6 +92,14 @@ def jidelnicek_plan_seznam():
 		ingre31 = [item[0] for item in ingre3]
 		ingre41 = [item[0] for item in ingre4]
 		ingre51 = [item[0] for item in ingre5]
+
+#		if request.form.get('check_ingre'):
+#			return render_template('jidelnicek3.html', ingre11=ingre11, ingre21=ingre21, ingre31=ingre31,
+#		 					ingre41=ingre41, ingre51=ingre51) 
+#		else: #vytvorit jidelnicek4 a do nej napsat nemate zadne polozky v nakupnim seznamu, nebo flash message
+#				return render_template('jidelnicek3.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3,
+#				nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41,
+#				ingre51=ingre51)
 
 		return render_template('jidelnicek3.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51)
 
