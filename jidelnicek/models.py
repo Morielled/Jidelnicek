@@ -9,7 +9,6 @@ class Recepty(db.Model):
 			title = db.Column(db.String(64))
 			foto = db.Column(db.String(100))
 
-#nastavit relationship
 			ingredience = db.relationship('Ingredience', backref='recept', lazy=True)
 		#	tagy = db.relationship('Tagy', backref='recepty', lazy='dynamic')
 
@@ -21,9 +20,6 @@ class Recepty(db.Model):
 
 			def __repr__(self):
 						return f"{self.title, self.url, self.foto}"
-
-
-
 
 class Ingredience(db.Model):
 

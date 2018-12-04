@@ -1,9 +1,9 @@
 import os
-from flask import Flask, session, request
+from flask import Flask, session, request, redirect
 from flask import render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
-#from jidelnicek.forms import 
+from jidelnicek.forms import IngreForm
 #import pdfkit
 
 app = Flask (__name__)
@@ -44,7 +44,7 @@ def index():
 #		return render_template('jidelnicek.html')
 
 
-@app.route('/jidelnicek_plan')
+@app.route('/jidelnicek_plan', methods=['GET', 'POST'])
 def jidelnicek_plan():
 # 5 ruznych random receptu
 		nazev1 = Recepty.query.order_by(func.random()).first()
@@ -66,8 +66,23 @@ def jidelnicek_plan():
 		ingre41 = [item[0] for item in ingre4]
 		ingre51 = [item[0] for item in ingre5]
 
+		form1 = IngreForm()
+		if form1.validate_on_submit():
+				session['checkbox'] = form1.checkbox.data
+		#		if session.get('checkbox') == True:
+		#				 	return render_template('jidelnicek3.html')
+
+				return redirect(url_for('jidelnicek_plan_seznam'))
 		
-		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51)
+		form2 = IngreForm()
+		if form2.validate_on_submit():
+				session['checkbox'] = form2.checkbox.data
+		#		if session.get('checkbox') == True:
+		#				 	return render_template('jidelnicek3.html')
+
+				return redirect(url_for('jidelnicek_plan_seznam'))
+		
+		return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51, form1=form1, form2=form2)
 
 
 
