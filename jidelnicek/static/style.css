@@ -31,22 +31,35 @@ h1.nadpis{
 	font-family: 'Mali', cursive;
 	font-weight: bold;
 }
+/*Pismo tlačítek na generování nebo přechod na recept*/
 .generuj{
 	color: white;
 	font-family: 'Mali', cursive;
 }
+/*Pismo pouzite v karte receptu*/
 .karta{
 	color: black;
 	font-family: 'Mali', cursive;
 }
+/*Pismo pouzite ve vyctu ingredienci receptu*/
 .ingredience{
 	color: black;
 	font-family: 'Calibri', cursive;
 }
+/*velikost vsech obrazků receptů*/
 .obrazekreceptu{
   height: 8rem;
 }
 /*aby byla stejná velikost všech obrázků receptů v pětidenním výčtu*/
 .zarovnaniingredienci{
 	text-align: left;
+}
+/*podtrzeni napisu Budete potrebovat a Nakupni seznam*/
+.podtrzeni{
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+/*podbarvení nákupního seznamu, aby byl čitelný, barva jako v kartách receptů snad*/
+.pozadinakupseznamu{
+	background-color: rgba(255, 255, 255, 0.9);
 }
