@@ -28,7 +28,8 @@
 <div class="container zarovnani">
 
 	<h1 class="display-5 nadpis ex1">Naplánujte si jídelníček na příští týden!</h1>
-	<p class="paragraf1a2">Pokud se Vám vybraná kombinece nelíbí, vybírejte pomocí tlačítka Chci jiné recepty, dokud nebudete spokojení.</p>
+	<hr class="my-4">
+	<p class="paragraf1a2">Vybírejte pomocí tlačítka Chci jiné recepty, dokud nebudete spokojeni se svým jídelníčkem.</p>
 	<p class="paragraf1a2">Zaškrtněte suroviny, které doma nemáte a musíte je dokoupit.</p>
 	<p class="paragraf1a2">Vytvořte si nákupní seznam, pomocí tlačítka Chci vidět nákupní seznam.</p>
 	<br>
@@ -62,7 +63,7 @@
 					{%  for ing in ingre11 %}
 					<form method="post">
 						{{ form1.hidden_tag() }}
-						{{ form1.checkbox}} {{ing}}
+						{{ form1.checkbox1}} {{ing}}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
 					{% endfor %}
@@ -84,8 +85,8 @@
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre21 %}
 					<form method="post">
-						{{ form2.hidden_tag() }}
-						{{ form2.checkbox}} {{ing}}
+						{{ form1.hidden_tag() }}
+						{{ form1.checkbox1}} {{ing}}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
 					{% endfor %}
@@ -108,8 +109,8 @@
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre31 %}
 					<form method="post">
-						{{ form2.hidden_tag() }}
-						{{ form2.checkbox}} {{ing}}
+						{{ form1.hidden_tag() }}
+						{{ form1.checkbox1}} {{ing}}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
 					{% endfor %}
@@ -131,8 +132,8 @@
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre41 %}
 					<form method="post">
-						{{ form2.hidden_tag() }}
-						{{ form2.checkbox}} {{ing}}
+						{{ form1.hidden_tag() }}
+						{{ form1.checkbox1}} {{ing}}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
 					{% endfor %}
@@ -154,8 +155,8 @@
 		<div class="zarovnaniingredienci ingredience">
 				{%  for ing in ingre51 %}
 					<form method="post">
-						{{ form2.hidden_tag() }}
-						{{ form2.checkbox}} {{ing}}
+						{{ form1.hidden_tag() }}
+						{{ form1.checkbox1}} {{ing}}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
 					{% endfor %}
@@ -174,31 +175,19 @@
 <div>
 
 
-			<p class="paragraf1a2">Pokud jste spokojeni s výběrem receptů, </p>
-			<p class="paragraf1a2">zašktněte si ingredience, které Vám doma chybí</p>
+			<p class="paragraf1a2">Zašktněte si ingredience, které Vám doma chybí</p>
 			<p class="paragraf1a2">a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
 			<br>
 			<br>
 			<form method="post">
 					{{ form1.hidden_tag() }}
-						{{ form1.submit(class='btn btn-success generuj') }}
-			</form> 	
+					{{ form1.submit1(class='btn btn-success generuj') }}
+			</form> 		
+		
 		<!--		<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám hotovo! Chci vidět nákupní seznam</a>
 		-->
 			<br>
 			<br>
-
-
-
-<!--Dole pod tímto mám hozené další možnosti jak udělat nákupní seznam, ale checkbox mi nedovoluje checknout víc jak jednu ingredienci a ještě to není srovnané pořádně-->
-
-<!--<ul class="list-group">
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-	</ul>-->
 
 	</div>
 

@@ -27,7 +27,8 @@
 <div class="container zarovnani">
 
 	<h1 class="display-5 nadpis ex1">Naplánujte si jídelníček na příští týden!</h1>
-	<p class="paragraf1a2">Pokud se Vám vybraná kombinece nelíbí, vybírejte pomocí tlačítka Chci jiné recepty, dokud nebudete spokojení.</p>
+	<hr class="my-4">
+	<p class="paragraf1a2">Vybírejte pomocí tlačítka Chci jiné recepty, dokud nebudete spokojeni se svým jídelníčkem.</p>
 	<p class="paragraf1a2">Zaškrtněte suroviny, které doma nemáte a musíte je dokoupit.</p>
 	<p class="paragraf1a2">Vytvořte si nákupní seznam, pomocí tlačítka Chci vidět nákupní seznam.</p>
 	<br>
@@ -52,7 +53,7 @@
 <div class="row card-deck">
 
 <div class="card karta bg-light" style="width: 20rem;"> 
-	<img class="card-img-top img-fluid obrazekreceptu" src="{{ nazev1.foto }}" alt="Card image cap">
+	<img class="card-img-top img-fluid obrazekreceptu" src=" {{ nazev1.foto }} " alt="Card image cap">
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev1.title }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
@@ -74,14 +75,14 @@
 <div class="card karta bg-light" style="width: 20rem">
 		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev2.title }}</h5>
+			<h5 class="card-title">{{ nazev2.title  }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre21 %}
 					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
-			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<a href="{{ nazev2.url  }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -110,9 +111,9 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto }}" alt="Card image cap">
+		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto  }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev4.title }}</h5>
+			<h5 class="card-title">{{ nazev4.title  }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre41 %}
@@ -129,9 +130,9 @@
 <br>
 
 <div class="card karta bg-light" style="width: 20rem;">
-	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto }}" alt="Card image cap">
+	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto  }}" alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ nazev5.title }}</h5>
+		<h5 class="card-title">{{ nazev5.foto }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<div class="zarovnaniingredienci ingredience">
 				{%  for ing in ingre51 %}
@@ -156,10 +157,10 @@
 	<div class="pozadinakupseznamu">
 		<h3 class="paragraf1a2 podtrzeni">Nákupní seznam</h3>		
 		<div class="checkbox nakupniseznam">
-		<!--	{  for ses in form }-->
-				<li>checkbox1: {{session['checkbox']}}</li>
+				<!-- {  for ses in session['checkbox1'] } 
+				<li>checkbox1: {{session['checkbox1']}}</li>
 				<li>checkbox2: {{session['checkbox']}}</li>
-		<!--	{ endfor }-->
+				 { endfor } -->
 		</div>
 	</div>
 			<br>
@@ -168,17 +169,6 @@
 			<br>
 			<br>
 
-
-
-<!--Dole pod tímto mám hozené další možnosti jak udělat nákupní seznam, ale checkbox mi nedovoluje checknout víc jak jednu ingredienci a ještě to není srovnané pořádně-->
-
-<!--<ul class="list-group">
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-		<li class="list-group-item"><label for="yes"><input type="radio" id="yes" name="vyberingredience" value="yes"></label></li>
-	</ul>-->
 
 <!--<ul class="list-group">
 		<li class="list-group-item">Jedna ingredience</li>
