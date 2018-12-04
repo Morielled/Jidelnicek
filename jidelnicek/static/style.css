@@ -30,6 +30,8 @@ h1.nadpis{
 	color: black;
 	font-family: 'Mali', cursive;
 	font-weight: bold;
+	margin-top: 0px; 
+	margin-bottom: 0px;
 }
 /*Pismo tlačítek na generování nebo přechod na recept*/
 .generuj{
@@ -61,7 +63,7 @@ h1.nadpis{
 }
 /*podbarvení nákupního seznamu, aby byl čitelný, barva jako v kartách receptů snad*/
 .pozadinakupseznamu{
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgb(255, 253, 253);
 }
 .nakupniseznam{
 	text-align: left;
