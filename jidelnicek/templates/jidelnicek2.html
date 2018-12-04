@@ -55,7 +55,7 @@
 	<img class="card-img-top img-fluid obrazekreceptu" src="{{ nazev1.foto }}" alt="Card image cap">
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev1.title }}</h5>
-		<p class="card-text ingredience">Budete potřebovat:</p>
+		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre11 %}
@@ -75,7 +75,7 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev2.title }}</h5>
-			<p class="card-text ingredience">Budete potřebovat:</p>
+			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre21 %}
 					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
@@ -94,7 +94,7 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev3.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev3.title }}</h5>
-			<p class="card-text ingredience">Budete potřebovat:</p>
+			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre31 %}
 					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
@@ -113,7 +113,7 @@
 		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto }}" alt="Card image cap">
 		<div class="card-body">
 			<h5 class="card-title">{{ nazev4.title }}</h5>
-			<p class="card-text ingredience">Budete potřebovat:</p>
+			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre41 %}
 					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
@@ -132,7 +132,7 @@
 	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto }}" alt="Card image cap">
 	<div class="card-body">
 		<h5 class="card-title">{{ nazev5.title }}</h5>
-		<p class="card-text ingredience">Budete potřebovat:</p>
+		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<div class="zarovnaniingredienci ingredience">
 				{%  for ing in ingre51 %}
 				<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>
@@ -152,7 +152,9 @@
 <div>
 
 
-			<p class="paragraf1a2">Pokud jste spokojeni s výběrem receptů, zašktněte si ingredience, které Vám doma chybí a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
+			<p class="paragraf1a2">Pokud jste spokojeni s výběrem receptů, </p>
+			<p class="paragraf1a2">zašktněte si ingredience, které Vám doma chybí</p>
+			<p class="paragraf1a2">a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
 			<br>
 			<br>
 			<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám hotovo! Chci vidět nákupní seznam</a>
