@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-		<title>JÍDELNÍČEK</title>
+		<title>TÝDENÍČEK</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -53,9 +53,9 @@
 <div class="row card-deck">
 
 <div class="card karta bg-light" style="width: 20rem;"> 
-	<img class="card-img-top img-fluid obrazekreceptu" src=" {{ nazev1.foto }} " alt="Card image cap">
+	<img class="card-img-top img-fluid obrazekreceptu" src=" {{ session['nazev1'] }} " alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ nazev1.title }}</h5>
+		<h5 class="card-title">{{ session['nazev1'] }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
@@ -63,7 +63,7 @@
 					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
 					{% endfor %}
 			</div>
-		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
+		<a href="{{ session['nazev1'] }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 	</div>
 </div>
 
@@ -157,10 +157,10 @@
 	<div class="pozadinakupseznamu">
 		<h3 class="paragraf1a2 podtrzeni">Nákupní seznam</h3>		
 		<div class="checkbox nakupniseznam">
-				<!-- {  for ses in session['checkbox1'] } 
+				 <!--{  for ses in session['checkbox1'] } -->
 				<li>checkbox1: {{session['checkbox1']}}</li>
 				<li>checkbox2: {{session['checkbox']}}</li>
-				 { endfor } -->
+				<!-- { endfor } -->
 		</div>
 	</div>
 			<br>
