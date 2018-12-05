@@ -1,5 +1,5 @@
 import os
-from flask import Flask, session, request, redirect
+from flask import Flask, session, request, redirect, make_response
 from flask import render_template,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import func, select
@@ -80,26 +80,33 @@ def jidelnicek_plan():
 
 		form1 = IngreForm1()
 		
+		session['nazev1.id'] = nazev1.id
+		session['nazev2.id'] = nazev2.id
+		session['nazev3.id'] = nazev3.id
+		session['nazev4.id'] = nazev4.id
+		session['nazev5.id'] = nazev5.id
 	
-		if 'nazev1' in session:
-			nazev1 = session ['nazev1']
-		elif 'nazev2' in session:
-			nazev2 = session ['nazev2']
-		elif 'nazev3' in session:
-			nazev3 = session ['nazev3']
-		elif 'nazev4' in session:
-			nazev4 = session ['nazev4']
-		elif 'nazev5' in session:
-			nazev5 = session ['nazev5'] 
-#			if request.method == 'POST':		
+#		if 'nazev1.id' in session:		
+#			nazev1.id = session ['nazev1.id']
+#		elif 'nazev2' in session:
+#			nazev2 = session ['nazev2']
+#		elif 'nazev3' in session:
+#			nazev3 = session ['nazev3']
+#		elif 'nazev4' in session:
+#			nazev4 = session ['nazev4']
+#		elif 'nazev5' in session:
+#			nazev5 = session ['nazev5'] 
+#		if request.method == 'POST':		
 		if form1.validate_on_submit():
-#						session['checkbox1'] = form1.checkbox1.data('checkbox1')
+#					session['checkbox1'] = form1.checkbox1.data('checkbox1')
 #						if session.get('checkbox1') == True:
 						
-#							return render_template('jidelnicek3.html')
-			return redirect(url_for('jidelnicek_plan_seznam'))
+#								return render_template('jidelnicek3.html')
+				return redirect(url_for('jidelnicek_plan_seznam'))
+#						
+			
 		else:
-			return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51,form1=form1) #form2=form2)
+				return render_template('jidelnicek2.html', nazev1=nazev1, nazev2=nazev2, nazev3=nazev3, nazev4=nazev4, nazev5=nazev5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51,form1=form1) #form2=form2)
 
 
 	#	form1 = IngreForm1()
@@ -125,8 +132,8 @@ def jidelnicek_plan():
 def jidelnicek_plan_seznam():
 		# 5 ruznych random receptu
 
-		nazev1 = session.get('nazev1')
-		nazev2 = session.get('nazev2')
+		nazev1 = session.get('nazev1.id')
+		nazev2 = session.get('nazev2.id')
 		nazev3 = session.get('nazev3')
 		nazev4 = session.get('nazev4')
 		nazev5 = session.get('nazev5')

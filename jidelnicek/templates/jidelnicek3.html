@@ -55,7 +55,7 @@
 <div class="card karta bg-light" style="width: 20rem;"> 
 	<img class="card-img-top img-fluid obrazekreceptu" src=" {{ session['nazev1'] }} " alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ session['nazev1'] }}</h5>
+		<h5 class="card-title">{{ session['nazev1.id'] }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
@@ -75,7 +75,7 @@
 <div class="card karta bg-light" style="width: 20rem">
 		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev2.title  }}</h5>
+			<h5 class="card-title">{{ session['nazev2.id'] }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
 					{%  for ing in ingre21 %}

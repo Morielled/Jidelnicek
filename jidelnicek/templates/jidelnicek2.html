@@ -56,17 +56,19 @@
 <div class="card karta bg-light" style="width: 20rem;"> 
 	<img class="card-img-top img-fluid obrazekreceptu" src="{{ nazev1.foto }}" alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">{{ nazev1.title }}</h5>
+		<h5 class="card-title">{{ nazev1.id }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<!-- vypis ingredienci -->
 			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre11 %}
+					
 					<form method="post">
-						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}
+						{%  for ing in ingre11 %}
+							{{ form1.hidden_tag() }}
+							{{ form1.checkbox1}} {{ing}}<br>
+						{% endfor %}	
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					{% endfor %}
+					
 			</div>
 		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 	</div>
@@ -80,16 +82,18 @@
 <div class="card karta bg-light" style="width: 20rem">
 		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev2.title }}</h5>
+			<h5 class="card-title">{{ nazev2.id }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre21 %}
+					
 					<form method="post">
-						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}
+						{%  for ing in ingre21 %}
+							{{ form1.hidden_tag() }}
+							{{ form1.checkbox1}} {{ing}}<br>
+						{% endfor %}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					{% endfor %}
+				
 					
 			</div>
 			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
@@ -107,13 +111,15 @@
 			<h5 class="card-title">{{ nazev3.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre31 %}
+					
 					<form method="post">
+					{%  for ing in ingre31 %}	
 						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}
+						{{ form1.checkbox1}} {{ing}}<br>
+					{% endfor %}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					{% endfor %}
+					
 			</div>
 			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
@@ -130,13 +136,15 @@
 			<h5 class="card-title">{{ nazev4.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre41 %}
+					
 					<form method="post">
+					{%  for ing in ingre41 %}
 						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}
+						{{ form1.checkbox1}} {{ing}}<br>
+					{% endfor %}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					{% endfor %}
+					
 			</div>
 			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
@@ -153,13 +161,15 @@
 		<h5 class="card-title">{{ nazev5.title }}</h5>
 		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
 		<div class="zarovnaniingredienci ingredience">
-				{%  for ing in ingre51 %}
+				
 					<form method="post">
+					{%  for ing in ingre51 %} 
 						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}
+						{{ form1.checkbox1}} {{ing}} <br>
+						{% endfor %}
 					</form>
 					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					{% endfor %}
+					
 		</div>
 		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 	</div>
