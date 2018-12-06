@@ -52,37 +52,43 @@
 <br>
 <div class="row card-deck">
 
+	<div class="card karta bg-light" style="width: 20rem;"> 
+			<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept1.foto }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ recept1.title }}</h5>
+				<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+				<!-- vypis ingredienci -->
+					<div class="zarovnaniingredienci ingredience">
+							
+					<!--		<form method="post" input type="hidden" name="recept1" value="{{ ingre11 }}"> -->
+								{%  for ing in ingre11 %}
+									<label><input type="checkbox" name="ingred1" value="{{ing}}"> {{ing}}</label>	</br>
+								{% endfor %}							
+							
+					</div>
+				<a href="{{ recept1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
+			</div>
+		</div>
+
+<br>
+<br>
+<br>
+<br>
+
 <div class="card karta bg-light" style="width: 20rem;"> 
-	<img class="card-img-top img-fluid obrazekreceptu" src=" {{ session['nazev1'] }} " alt="Card image cap">
-	<div class="card-body">
-		<h5 class="card-title">{{ session['nazev1.id'] }}</h5>
-		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-		<!-- vypis ingredienci -->
-			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre11 %}
-					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
-					{% endfor %}
-			</div>
-		<a href="{{ session['nazev1'] }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
-	</div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-
-<div class="card karta bg-light" style="width: 20rem">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
+		<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept2.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ session['nazev2.id'] }}</h5>
+			<h5 class="card-title">{{ recept2.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre21 %}
-					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
-					{% endfor %}
-			</div>
-			<a href="{{ nazev2.url  }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<!-- vypis ingredienci -->
+				<div class="zarovnaniingredienci ingredience">
+						
+							{%  for ing in ingre21 %}
+								<label><input type="checkbox" name="ingred2" value="{{ing}}"> {{ing}}</label>	</br>
+							{% endfor %}							
+						
+				</div>
+			<a href="{{ recept2.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -91,17 +97,20 @@
 <br>
 <br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev3.foto }}" alt="Card image cap">
+<div class="card karta bg-light" style="width: 20rem;"> 
+		<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept3.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev3.title }}</h5>
+			<h5 class="card-title">{{ recept3.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre31 %}
-					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
-					{% endfor %}
-			</div>
-			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<!-- vypis ingredienci -->
+				<div class="zarovnaniingredienci ingredience">
+					
+							{%  for ing in ingre31 %}
+								<label><input type="checkbox" name="ingred3" value="{{ing}}"> {{ing}}</label>	</br>
+							{% endfor %}							
+						
+				</div>
+			<a href="{{ recept3.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -110,17 +119,21 @@
 <br>
 <br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto  }}" alt="Card image cap">
+<div class="card karta bg-light" style="width: 20rem;"> 
+		<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept4.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev4.title  }}</h5>
+			<h5 class="card-title">{{ recept4.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					{%  for ing in ingre41 %}
-					<label><input type="checkbox" value=""> {{ing}}</label>	</br>
-					{% endfor %}
-			</div>
-			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
+			<!-- vypis ingredienci -->
+				<div class="zarovnaniingredienci ingredience">
+						
+				<!--		<form method="post" input type="hidden" name="recept1" value="{{ ingre11 }}"> -->
+							{%  for ing in ingre41 %}
+								<label><input type="checkbox" name="ingred4" value="{{ing}}"> {{ing}}</label>	</br>
+							{% endfor %}							
+						
+				</div>
+			<a href="{{ recept4.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 		</div>
 	</div>
 
@@ -129,19 +142,22 @@
 <br>
 <br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto  }}" alt="Card image cap">
-	<div class="card-body">
-		<h5 class="card-title">{{ nazev5.foto }}</h5>
-		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-		<div class="zarovnaniingredienci ingredience">
-				{%  for ing in ingre51 %}
-				<label><input type="checkbox" value=""> {{ing}}</label>	</br>
-				{% endfor %}
+<div class="card karta bg-light" style="width: 20rem;"> 
+		<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept5.foto }}" alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">{{ recept5.title }}</h5>
+			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+			<!-- vypis ingredienci -->
+				<div class="zarovnaniingredienci ingredience">
+						
+							{%  for ing in ingre51 %}
+								<label><input type="checkbox" name="ingred5" value="{{ing}}"> {{ing}}</label>	</br>
+							{% endfor %}							
+						
+				</div>
+			<a href="{{ recept5.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 		</div>
-		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 	</div>
-</div>
 
 
 <br>
@@ -157,10 +173,10 @@
 	<div class="pozadinakupseznamu">
 		<h3 class="paragraf1a2 podtrzeni">Nákupní seznam</h3>		
 		<div class="checkbox nakupniseznam">
-				 <!--{  for ses in session['checkbox1'] } -->
-				<li>checkbox1: {{session['checkbox1']}}</li>
-				<li>checkbox2: {{session['checkbox']}}</li>
-				<!-- { endfor } -->
+				{% for ing in formingred1 %} 
+				<li> {{ing}}</li> <br>
+				{% endfor %} 
+			
 		</div>
 	</div>
 			<br>

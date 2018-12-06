@@ -51,151 +51,139 @@
 	</div> -->
 <br>
 <br>
-<div class="row card-deck">
 
-<div class="card karta bg-light" style="width: 20rem;"> 
-	<img class="card-img-top img-fluid obrazekreceptu" src="{{ nazev1.foto }}" alt="Card image cap">
-	<div class="card-body">
-		<h5 class="card-title">{{ nazev1.id }}</h5>
-		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-		<!-- vypis ingredienci -->
-			<div class="zarovnaniingredienci ingredience">
-					
-					<form method="post">
-						{%  for ing in ingre11 %}
-							{{ form1.hidden_tag() }}
-							{{ form1.checkbox1}} {{ing}}<br>
-						{% endfor %}	
-					</form>
-					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					
-			</div>
-		<a href="{{ nazev1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
-	</div>
-</div>
+<form method="POST" action="{{ url_for('jidelnicek_plan_seznam')}}">
+	<div class="row card-deck">
 
-<br>
-<br>
-<br>
-<br>
-
-<div class="card karta bg-light" style="width: 20rem">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev2.foto }}" alt="Card image cap">
+	<div class="card karta bg-light" style="width: 20rem;"> 
+		<input type="hidden" name="recept1id" value="{{ recept1.id }}">
+		<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept1.foto }}" alt="Card image cap">
 		<div class="card-body">
-			<h5 class="card-title">{{ nazev2.id }}</h5>
+			<h5 class="card-title">{{ recept1.title }}</h5>
 			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					
-					<form method="post">
-						{%  for ing in ingre21 %}
-							{{ form1.hidden_tag() }}
-							{{ form1.checkbox1}} {{ing}}<br>
-						{% endfor %}
-					</form>
-					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-				
-					
+			<!-- vypis ingredienci -->
+				<div class="zarovnaniingredienci ingredience">
+						
+				<!--		<form method="post" input type="hidden" name="recept1" value="{{ ingre11 }}"> -->
+							{%  for ing in ingre11 %}
+								<label><input type="checkbox" name="ingred1" value="{{ ing }}"> {{ing}}</label>	</br>
+							{% endfor %}							
+						
+				</div>
+			<a href="{{ recept1.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<div class="card karta bg-light" style="width: 20rem;"> 
+			<input type="hidden" name="recept2id" value="{{ recept2.id }}">
+			<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept2.foto }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ recept2.title }}</h5>
+				<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+				<!-- vypis ingredienci -->
+					<div class="zarovnaniingredienci ingredience">
+							
+								{%  for ing in ingre21 %}
+									<label><input type="checkbox" name="ingred2" value="{{ ing }}"> {{ing}}</label>	</br>
+								{% endfor %}							
+							
+					</div>
+				<a href="{{ recept2.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 			</div>
-			<a href="{{ nazev2.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
-	</div>
 
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev3.foto }}" alt="Card image cap">
-		<div class="card-body">
-			<h5 class="card-title">{{ nazev3.title }}</h5>
-			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					
-					<form method="post">
-					{%  for ing in ingre31 %}	
-						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}<br>
-					{% endfor %}
-					</form>
-					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					
+	<div class="card karta bg-light" style="width: 20rem;"> 
+			<input type="hidden" name="recept3id" value="{{ recept3.id }}">
+			<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept3.foto }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ recept3.title }}</h5>
+				<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+				<!-- vypis ingredienci -->
+					<div class="zarovnaniingredienci ingredience">
+							
+								{%  for ing in ingre31 %}
+									<label><input type="checkbox" name="ingred3" value="{{ ing }}"> {{ing}}</label>	</br>
+								{% endfor %}							
+							
+					</div>
+				<a href="{{ recept3.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 			</div>
-			<a href="{{ nazev3.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
-	</div>
 
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-		<img class="card-img-top obrazekreceptu" src="{{ nazev4.foto }}" alt="Card image cap">
-		<div class="card-body">
-			<h5 class="card-title">{{ nazev4.title }}</h5>
-			<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-			<div class="zarovnaniingredienci ingredience">
-					
-					<form method="post">
-					{%  for ing in ingre41 %}
-						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}}<br>
-					{% endfor %}
-					</form>
-					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					
+	<div class="card karta bg-light" style="width: 20rem;"> 
+			<input type="hidden" name="recept4id" value="{{ recept4.id }}">
+			<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept4.foto }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ recept4.title }}</h5>
+				<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+				<!-- vypis ingredienci -->
+					<div class="zarovnaniingredienci ingredience">
+
+								{%  for ing in ingre41 %}
+									<label><input type="checkbox" name="ingred4" value="{{ ing }}"> {{ing}}</label>	</br>
+								{% endfor %}							
+							
+					</div>
+				<a href="{{ recept4.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
 			</div>
-			<a href="{{ nazev4.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
 		</div>
-	</div>
 
-<br>
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
-<div class="card karta bg-light" style="width: 20rem;">
-	<img class="card-img-top obrazekreceptu" src="{{ nazev5.foto }}" alt="Card image cap">
-	<div class="card-body">
-		<h5 class="card-title">{{ nazev5.title }}</h5>
-		<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
-		<div class="zarovnaniingredienci ingredience">
-				
-					<form method="post">
-					{%  for ing in ingre51 %} 
-						{{ form1.hidden_tag() }}
-						{{ form1.checkbox1}} {{ing}} <br>
-						{% endfor %}
-					</form>
-					<!--<label><input type="checkbox" value="" name="check_ingre"> {{ing}}</label>	</br>-->
-					
+	<div class="card karta bg-light" style="width: 20rem;"> 
+			<input type="hidden" name="recept5id" value="{{ recept5.id }}">
+			<img class="card-img-top img-fluid obrazekreceptu" src="{{ recept5.foto }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ recept5.title }}</h5>
+				<p class="card-text ingredience podtrzeni">Budete potřebovat:</p>
+				<!-- vypis ingredienci -->
+					<div class="zarovnaniingredienci ingredience">
+
+								{%  for ing in ingre51 %}
+									<label><input type="checkbox" name="ingred5" value="{{ ing }}"> {{ing}}</label>	</br>
+								{% endfor %}							
+							
+					</div>
+				<a href="{{ recept5.url }}"  target="_blank"button type="button" class="btn btn-success" >Zobrazit recept</a>
+			</div>
 		</div>
-		<a href="{{ nazev5.url }}"  target="_blank" button type="button" class="btn btn-success">Zobrazit recept</a>
+
+
+	<br>
 	</div>
-</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div>
 
 
-<br>
-</div>
-<br>
-<br>
-<br>
-<br>
-<div>
+				<p class="paragraf1a2">Zašktněte si ingredience, které Vám doma chybí</p>
+				<p class="paragraf1a2">a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
+				<br>
+				<br>
+			<input type="submit" class="btn btn-success generuj" value="Mám hotovo! Chci vidět nákupní seznam">
 
-
-			<p class="paragraf1a2">Zašktněte si ingredience, které Vám doma chybí</p>
-			<p class="paragraf1a2">a pomocí tlačítka níže si vytvořte nákupní seznam.</p>
-			<br>
-			<br>
-			<form method="post">
-					{{ form1.hidden_tag() }}
-					{{ form1.submit1(class='btn btn-success generuj') }}
-			</form> 		
+</form>		
 		
-		<!--		<a class="btn btn-success generuj" href="{{ url_for('jidelnicek_plan_seznam') }}" role="button">Mám hotovo! Chci vidět nákupní seznam</a>
-		-->
 			<br>
 			<br>
 
