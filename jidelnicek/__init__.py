@@ -113,11 +113,19 @@ def jidelnicek_plan_seznam():
 		ingre51 = [item[0] for item in ingre5]
 
 	
-		formingred1 = request.form['ingred1']
-		
+		formingred1 = request.form.getlist('ingred1')
+		formingred2 = request.form.getlist('ingred2')
+		formingred3 = request.form.getlist('ingred3')
+		formingred4 = request.form.getlist('ingred4')
+		formingred5 = request.form.getlist('ingred5')
+	
 		formingred11 = [item for item in formingred1]
+		formingred21 = [item for item in formingred2]
+		formingred31 = [item for item in formingred3]
+		formingred41 = [item for item in formingred4]
+		formingred51 = [item for item in formingred5]
 
-		return render_template('jidelnicek3.html', recept1=recept1, recept2=recept2, recept3=recept3, recept4=recept4, recept5=recept5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51, form1=form1, form1id=form1id) #, formingred11=formingred11)
+		return render_template('jidelnicek3.html', recept1=recept1, recept2=recept2, recept3=recept3, recept4=recept4, recept5=recept5, ingre11=ingre11, ingre21=ingre21, ingre31=ingre31, ingre41=ingre41, ingre51=ingre51, form1=form1, formingred11=formingred11, formingred21=formingred21, formingred31=formingred31, formingred41=formingred41, formingred51=formingred51)
 
 
 @app.errorhandler(404)
